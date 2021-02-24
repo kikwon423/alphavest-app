@@ -2127,6 +2127,7 @@ body.dark .switch__box {
 .sidebar__info {
   max-width: 128px;
   font-family: 'Poppins', sans-serif;
+  word-break: keep-all;
   font-size: 24px;
   line-height: 1.33333;
   font-weight: 500;

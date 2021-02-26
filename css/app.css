@@ -3003,6 +3003,7 @@ body.dark .header_border:before {
 .slider__title {
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
+  word-break: keep-all;
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: -.5px;
@@ -3011,6 +3012,7 @@ body.dark .header_border:before {
 
 .slider__info {
   margin-bottom: 24px;
+  word-break: keep-all;
 }
 
 .slider__btn {

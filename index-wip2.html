@@ -273,10 +273,21 @@ if (localStorage.getItem('darkMode') === "on") {
                         <div class="details__info">계정 잔액</div>
                       </div>
                     </div>
-                    
                   </div>
                   
+                  <div class="prices__head">
+                    <div class="activity__icon"><svg class="icon icon-calendar">
+                        <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                      </svg></div>
+                      <select class="select select_empty">
+                        <option>All Time</option>
+                      <option>This past week</option>
+                      <option>This Past Month</option>
+                      <option>This Past Year</option>
+                    </select>
+                  </div>
                 </div>
+                
                 <div class="details__flex">
                   <div class="details__money"><h6>₩ 501,450,000 </h6></div>
                   <div class="details__status color-green">+5.0% / +1,450,000 ₩</div>

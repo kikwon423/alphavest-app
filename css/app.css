@@ -1371,6 +1371,7 @@ body.dark .select.open {
   padding-left: 18px;
   line-height: 16px;
   font-weight: 700;
+  word-break: keep-all;
 }
 
 .status:before {
@@ -3063,9 +3064,9 @@ body.dark .header_border:before {
 
 .slider_home .slider__item {
   min-height: 393px;
-  background: -webkit-radial-gradient(0% 0%, 103.03% 103.03%, #D080FF 0%, #6C5DD3 100%);
-  background: -o-radial-gradient(0% 0%, 103.03% 103.03%, #D080FF 0%, #6C5DD3 100%);
-  background: radial-gradient(103.03% 103.03% at 0% 0%, #D080FF 0%, #6C5DD3 100%);
+  background: -webkit-linear-gradient(226.42deg, #F7BB00 12.52%, #FF8539 75.73%);
+  background: -o-linear-gradient(226.42deg, #F7BB00 12.52%, #FF8539 75.73%);
+  background: linear-gradient(223.58deg, #F7BB00 12.52%, #FF8539 75.73%);
 }
 
 .slider_home .slider__wrap {
@@ -7837,14 +7838,30 @@ body.dark .details__link:hover .icon {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
+  color: #fff;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 48px;
   border-radius: 16px;
-  border: 1px solid #E4E4E4;
-  background: #ffffff;
+  background: -webkit-radial-gradient(0% 0%, 103.03% 103.03%, #D080FF 0%, #6C5DD3 100%);
+  background: -o-radial-gradient(0% 0%, 103.03% 103.03%, #D080FF 0%, #6C5DD3 100%);
+  background: radial-gradient(103.03% 103.03% at 0% 0%, #D080FF 0%, #6C5DD3 100%);
+}
+
+.exchange__top:before {
+  content: "";
+  position: absolute;
+ top: -17px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 38px;
+  color: #fff;
+  border-radius: 16px;
+  -webkit-filter: blur(86.985px);
+  filter: blur(86.985px);
 }
 
 .exchange__top:after {
@@ -7853,10 +7870,10 @@ body.dark .details__link:hover .icon {
   bottom: -17px;
   left: 0;
   right: 0;
+  color: #fff;
   z-index: -1;
   height: 38px;
   border-radius: 16px;
-  background: #E4E4E4;
   -webkit-filter: blur(86.985px);
   filter: blur(86.985px);
 }
@@ -7866,7 +7883,6 @@ body.dark .details__link:hover .icon {
   -ms-flex: 1;
   flex: 1;
   padding: 35px 24px;
-  border-right: 1px solid #E4E4E4;
 }
 
 .exchange__cell:last-child {
@@ -7907,13 +7923,16 @@ body.dark .details__link:hover .icon {
 
 .exchange__currency {
   font-weight: 600;
+  word-break: keep-all;
+
 }
 
 .exchange__info {
   font-size: 12px;
+  word-break: keep-all;
   line-height: 1.33333;
   font-weight: 500;
-  color: #808191;
+  color: #fff;
 }
 
 .exchange__arrow {
@@ -8002,7 +8021,8 @@ body.dark .details__link:hover .icon {
 }
 
 .exchange__price {
-  font-weight: 600;
+  font-weight: 800;
+  word-break: keep-all;
 }
 
 .exchange__row {
@@ -8057,6 +8077,7 @@ body.dark .details__link:hover .icon {
 
 .exchange__date {
   font-size: 10px;
+  word-break: keep-all;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -10700,7 +10721,6 @@ body.dark .actions .select.open {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-height: calc(100vh - 94px);
   }
   .exchange__top {
     margin-bottom: 24px;

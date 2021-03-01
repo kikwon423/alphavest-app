@@ -142,8 +142,8 @@ if (localStorage.getItem('darkMode') === "on") {
         <div class="page__center">
           <div class="page__row page__row_head page__row_border">
             <div class="page__col">
-              <div class="page__hello h5">안녕하세요 김보영 고객님,</div>
-              <div class="page__welcome h2">환영합니다<span class="desktop-hide">👋</span></div>
+              <div class="page__hello h6">안녕하세요 김보영 고객님,</div>
+              <div class="page__welcome h3">환영합니다<span class="desktop-hide">👋</span></div>
             </div>
             <div class="page__col">
               <div class="header"><button class="header__burger"></button>
@@ -179,7 +179,7 @@ if (localStorage.getItem('darkMode') === "on") {
                       <use xlink:href="img/sprite.svg#icon-bell"></use>
                     </svg><span class="notifications__counter">2</span></button>
                   <div class="notifications__wrap">
-                    <div class="notifications__info h6">Recent Notification</div>
+                    <div class="notifications__info h6">최근 알림</div>
                     <div class="notifications__list"><a class="notifications__item" href="notifications.html">
                         <div class="notifications__ava"><img class="notifications__pic" src="img/ava-1.png" alt="" />
                           <div class="notifications__status bg-blue"><img class="notifications__pic" src="img/chat.svg" alt="" /></div>
@@ -255,6 +255,37 @@ if (localStorage.getItem('darkMode') === "on") {
           </div>
           <div class="page__row page__row_border">
             <div class="page__col">
+              <div class="details">
+                <div class="details__list details__list_three">
+                  <div class="details__item">
+                    <div class="details__head">
+                      <div class="details__preview bg-purple"><img class="details__pic" src="img/folder.svg" alt=""></div>
+                      <div class="details__text caption-sm">회원 입력</div>
+                    </div>
+                    <div class="details__counter h5">2020년 10월</div>
+
+                  </div>
+                  <div class="details__item">
+                    <div class="details__head">
+                      <div class="details__preview bg-pink"><img class="details__pic" src="img/activity.svg" alt=""></div>
+                      <div class="details__text caption-sm">투자 프랜</div>
+                    </div>
+                    <div class="details__counter h5">알파 스탠다드</div>
+
+                  </div>
+                  <div class="details__item">
+                    <div class="details__head">
+                      <div class="details__preview bg-blue"><img class="details__pic" src="img/bag.svg" alt=""></div>
+                      <div class="details__text caption-sm">투자 목표</div>
+                    </div>
+                    <div class="details__counter h5">성장 계획</div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
               <div class="slider">
                 <div class="slider__container">
                   <div class="slider__inner owl-carousel js-slider">
@@ -284,26 +315,18 @@ if (localStorage.getItem('darkMode') === "on") {
                     </svg></button>
                 </div>
               </div>
+
               <div class="details details_statements">
                 <div class="details__container">
-                  <div class="details__title h6 mobile-hide">Earnings Report</div>
+                  <div class="details__title h6 mobile-hide">현재 수입</div>
                   <div class="dropdown js-dropdown">
-                    <div class="dropdown__head js-dropdown-head">Last 30 days</div>
-                    <div class="dropdown__body js-dropdown-body"><a class="dropdown__item" href="#">
-                        <div class="dropdown__title title">Bento 3D Kit </div>
-                        <div class="dropdown__info caption">Illustration</div>
-                      </a><a class="dropdown__item" href="#">
-                        <div class="dropdown__title title">Bento 3D Kit </div>
-                        <div class="dropdown__info caption">Illustration</div>
-                      </a><a class="dropdown__item" href="#">
-                        <div class="dropdown__title title">Collab UI Kit </div>
-                        <div class="dropdown__info caption">Coded Template</div>
-                      </a></div>
+                    <div class="dropdown__head js-dropdown-head">최근 30 일</div>
+
                   </div>
                   <div class="details__row">
                     <div class="details__col">
                       <div class="details__top">
-                        <div class="details__number h1">$586</div><a class="details__line" href="#">
+                        <div class="details__number h4">₩5.86억</div><a class="details__line" href="#">
                           <div class="details__preview"><img class="details__pic" src="img/details-pic-1.png" alt=""></div>
                           <div class="details__info caption-sm">Your total earnings</div>
                         </a>
@@ -333,9 +356,9 @@ if (localStorage.getItem('darkMode') === "on") {
                     <div class="details__item">
                       <div class="details__head">
                         <div class="details__preview bg-purple"><img class="details__pic" src="img/folder.svg" alt=""></div>
-                        <div class="details__text caption-sm">Total Earnings</div>
+                        <div class="details__text caption-sm">배당금</div>
                       </div>
-                      <div class="details__counter h4">$586.75</div>
+                      <div class="details__counter h5">₩586.75</div>
                       <div class="details__indicator">
                         <div class="details__progress bg-purple" style="width: 55%;"></div>
                       </div>
@@ -343,9 +366,9 @@ if (localStorage.getItem('darkMode') === "on") {
                     <div class="details__item">
                       <div class="details__head">
                         <div class="details__preview bg-pink"><img class="details__pic" src="img/activity.svg" alt=""></div>
-                        <div class="details__text caption-sm">Item Earnings</div>
+                        <div class="details__text caption-sm">가치 평가</div>
                       </div>
-                      <div class="details__counter h4">$425.94</div>
+                      <div class="details__counter h5">₩425.94</div>
                       <div class="details__indicator">
                         <div class="details__progress bg-pink" style="width: 52%;"></div>
                       </div>
@@ -353,9 +376,9 @@ if (localStorage.getItem('darkMode') === "on") {
                     <div class="details__item">
                       <div class="details__head">
                         <div class="details__preview bg-blue"><img class="details__pic" src="img/bag.svg" alt=""></div>
-                        <div class="details__text caption-sm">Tax withheld</div>
+                        <div class="details__text caption-sm">자문 수수료</div>
                       </div>
-                      <div class="details__counter h4">$25.94</div>
+                      <div class="details__counter h5">₩25.94</div>
                       <div class="details__indicator">
                         <div class="details__progress bg-blue" style="width: 55%;"></div>
                       </div>

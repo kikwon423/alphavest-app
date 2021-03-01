@@ -264,8 +264,6 @@ if (localStorage.getItem('darkMode') === "on") {
 
             <div class="details">
               <div class="details__container">
-
-
                 <div class="details__top">
                   <div class="details__company">
                     <div class="details__head">
@@ -274,9 +272,7 @@ if (localStorage.getItem('darkMode') === "on") {
                       </div>
                     </div>
                   </div>
-                  
-                  <div class="prices__head">
-                    <div class="activity__icon"><svg class="icon icon-calendar">
+                  <div class="details__btns"><svg class="icon icon-calendar">
                         <use xlink:href="img/sprite.svg#icon-calendar"></use>
                       </svg></div>
                       <select class="select select_empty">
@@ -284,14 +280,15 @@ if (localStorage.getItem('darkMode') === "on") {
                       <option>This past week</option>
                       <option>This Past Month</option>
                       <option>This Past Year</option>
-                    </select>
-                  </div>
+                      </select>
                 </div>
-                
+              
                 <div class="details__flex">
                   <div class="details__money"><h6>₩ 501,450,000 </h6></div>
                   <div class="details__status color-green">+5.0% / +1,450,000 ₩</div>
                 </div>
+                
+                
                 <div class="details__chart">
                   <div id="chart-price"></div>
                 </div>
@@ -333,10 +330,29 @@ if (localStorage.getItem('darkMode') === "on") {
                     </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
+
+            <div class="details">
+              <div class="details__container">
+                  <div class="card card_widget text-center"><button class="card__next"><svg class="icon icon-arrow-up-right">
+                      <use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
+                    </svg></button>
+                  <div class="card__chart card__chart_total-balance">
+                    <div id="chart-total-balance">계정 잔액</div>
+                  </div>
+                  <div class="card__inner">
+                    <div class="card__title h6"></div>
+                    <div class="card__currency">KRW</div>
+                    <div class="card__number h4">423,080,021</div>
+                    <div class="card__price h6 color-green">399,423 USD</div>
+                    <button class="card__btn btn btn_blue">자세히 보기</button>
+                    <button class="wallets__btn btn btn_border">예금 하기</button>
+                  </div>
+              </div>
+            </div>
+            </div>
+
           </div>
 
           
@@ -391,21 +407,7 @@ if (localStorage.getItem('darkMode') === "on") {
 
 
 
-            <div class="card card_widget text-center"><button class="card__next"><svg class="icon icon-arrow-up-right">
-                  <use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
-                </svg></button>
-              <div class="card__chart card__chart_total-balance">
-                <div id="chart-total-balance">계정 잔액</div>
-              </div>
-              <div class="card__inner">
-                <div class="card__title h6"></div>
-                <div class="card__currency">KRW</div>
-                <div class="card__number h4">423,080,021</div>
-                <div class="card__price h6 color-green">399,423 USD</div>
-                <button class="card__btn btn btn_blue">자세히 보기</button>
-                <button class="wallets__btn btn btn_border">예금 하기</button>
-              </div>
-            </div>
+            
             <div class="card">
               <div class="card__head">
                 <div class="card__title h6">Latest Activities</div>

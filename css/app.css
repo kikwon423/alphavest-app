@@ -3228,6 +3228,7 @@ body.dark .slider__close .icon {
   padding: 0 8px;
   border-radius: 12px;
   background: #BCEAFF;
+  word-break: keep-all;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -3281,6 +3282,7 @@ body.dark .slider__close .icon {
 
 .widgets__btns {
   margin-top: 32px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -7142,6 +7144,7 @@ body.dark .prices__row:not(.prices__row_head):hover {
   padding: 32px 32px 18px;
   background: #ffffff;
   border-radius: 32px;
+  margin-bottom: 48px;
 }
 
 .details__container:before {
@@ -7415,6 +7418,7 @@ body.dark .prices__row:not(.prices__row_head):hover {
   margin-bottom: 3px;
   font-size: 12px;
   line-height: 1.33333;
+  word-break: keep-all;
   font-weight: 500;
   color: #808191;
 }
@@ -7431,6 +7435,7 @@ body.dark .prices__row:not(.prices__row_head):hover {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1.33333;
+  word-break: keep-all;
   font-weight: 500;
 }
 
@@ -7717,14 +7722,14 @@ body.dark .details__link:hover .icon {
   border-right: 1px solid #E4E4E4;
 }
 
-.details2__list_three .details__item {
+.details2__list_three .details2__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 33.333%;
   flex: 0 0 33.333%;
   width: 33.333%;
 }
 
-.details2__list_four .details__item {
+.details2__list_four .details2__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
@@ -9021,6 +9026,13 @@ body.dark .actions .select.open {
   .slider_home .slider__preview {
     left: 20%;
   }
+
+  .details2__list_three .details2__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    width: 33.333%;
+  }
 }
 
 @media only screen and (max-width: 1579px) {
@@ -9029,6 +9041,12 @@ body.dark .actions .select.open {
   }
   .notifications__text {
     max-width: 400px;
+  }
+  .details2__list_three .details2__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    width: 33.333%;
   }
 }
 
@@ -9152,6 +9170,12 @@ body.dark .actions .select.open {
   }
   .exchange__container {
     padding-right: 48px;
+  }
+  .details2__list_three .details2__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    width: 33.333%;
   }
 }
 

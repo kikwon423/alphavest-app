@@ -312,6 +312,215 @@ Apex.chart = {
   }
 })();
 
+
+
+
+// chart scatter plot
+
+(function () {
+  options = {
+    series: [{
+    name: "A",
+    data: [
+    [3, 5.4], [3, 2], [3, 3], [3, 2], [3, 1], [3, 3.2], [3, 7.4]]
+  },{
+    name: "B",
+    data: [
+    [5, 3], [5, 3.5], [5, 3], [5, 3], [5, 8], [5, 2], [5, 3]]
+  },{
+    name: "C",
+    data: [
+    [6, 13.4], [6, 11], [6, 8], [6, 17], [6, 4], [6, 12.2], [6, 14.4]]
+  },{
+    name: "D",
+    data: [
+    [7, 3], [7, 3.5], [7, 3], [7, 3], [7, 8], [7, 2], [7, 3]]
+  },{
+    name: "E",
+    data: [
+    [9, 3], [9, 3.5], [9, 3], [9, 3], [9, 8], [9, 2], [9, 3]]
+  }],
+    chart: {
+    height: 350,
+    type: 'scatter',
+    zoom: {
+      enabled: false,
+      type: 'xy'
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+
+  legend: {
+    show: false
+  },
+
+  xaxis: {
+    categories: [['A1'],['A2'],['A3'],['B1'],['B2'],['B3']],
+    tickAmount: 10,
+    tickPlacement: 'between',    
+  },
+
+  yaxis: {
+    tickAmount: 7
+  }
+  };
+  
+  var chart = document.querySelector('#chart-scatter-projects');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+
+
+
+// chart scatter plot2
+
+(function () {
+  options = {
+    
+    series: [{
+      name: "A1",
+      data: [
+      [null]]
+    },{
+      name: "A2",
+      data: [
+      [null]]
+    },{
+      name: "A3",
+      data: [
+      [null]]
+    },{
+      name: "B1",
+      data: [
+      [3, 5.4], [3, 7], [3, 9], [3, 6], [3, 5], [3, 3.2], [3, 7.4]]
+    },{
+      name: "B2",
+      data: [
+      [4, 6], [4, 8], [4, 9], [4, 7], [4, 12], [4, 10], [4, 11]]
+    },{
+      name: "B3",
+      data: [
+      [5, 7], [5, 9], [5, 10], [5, 7], [5, 13], [5, 14], [5, 12]]
+    },{
+      name: "C1",
+      data: [
+      [6, 11.2], [6, 11], [6, 8.4], [6, 10.2], [6, 7], [6, 12.2], [6, 9.4]]
+    },{
+      name: "C2",
+      data: [
+      [7, 12], [7, 11], [7, 13.4], [7, 12.2], [7, 11.7], [7, 16], [7, 12]]
+    },{
+      name: "D1",
+      data: [
+      [9, 3], [9, 3.5], [9, 3], [9, 3], [9, 8], [9, 2], [9, 3]]
+    }],
+    chart: {
+    height: 350,
+    type: 'scatter',
+    zoom: {
+      enabled: false,
+      type: 'xy'
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+
+  legend: {
+    show: true,
+    labels: {
+      useSeriesColors: true
+  },
+  },
+
+  xaxis: {
+    tickAmount: 5,
+    tickPlacement: 'between',
+    labels: {show:false},
+    min:0,
+    max:15
+  },
+
+  yaxis: {
+    tickAmount: 7
+  }
+  };
+  
+  var chart = document.querySelector('#chart-scatter-projects2');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+
+
+
+// chart price2
+(function () {
+  var options = {
+    series: [{
+      name: '투자 가치 (백만)',
+      type: 'column',
+      data: [300, 300, 550, 550, 650, 650, 650, 750]
+    }, {
+      name: '',
+      type: 'line',
+      data: []
+    }],
+    chart: {
+      height: '100%',
+      type: 'line',
+      toolbar: {
+        show: false
+      }
+    },
+    colors: [green, blue],
+    stroke: {
+      width: [0, 0]
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '60%'
+      }
+    },
+    legend: {
+      show: false
+    },
+    dataLabels: {
+      enabled: false,
+      enabledOnSeries: [1]
+    },
+    labels: ['08/2020', '09/2020', '10/2020', '11/2020', '12/2020', '01/2021', '02/2021', '03/2021'],
+    xaxis: {
+      tooltip: {
+        enabled: false
+      }
+    },
+    yaxis: [{
+      labels: {
+        show: false
+      }
+
+    }, {
+      opposite: true,
+      labels: {
+        show: false
+      }
+    }]
+  };
+
+  var chart = document.querySelector('#chart-price2');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+
+
 // chart price
 (function () {
   var options = {

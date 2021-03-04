@@ -396,42 +396,67 @@ Apex.chart = {
     },{
       name: "B1",
       data: [
-      [3, 5.4], [3, 7], [3, 9], [3, 6], [3, 5], [3, 3.2], [3, 7.4]]
+      [3, 5.4], [3, 7], [3, 9], [3, 6], [3, 5]]
     },{
       name: "B2",
       data: [
-      [4, 6], [4, 8], [4, 9], [4, 7], [4, 12], [4, 10], [4, 11]]
+      [4, 6], [4, 8], [4, 7.4], [4, 6.5], [4, 10]]
     },{
       name: "B3",
       data: [
-      [5, 7], [5, 9], [5, 10], [5, 7], [5, 13], [5, 14], [5, 12]]
+      [5, 7], [5, 9], [5, 10], [5, 7]]
     },{
       name: "C1",
       data: [
-      [6, 11.2], [6, 11], [6, 8.4], [6, 10.2], [6, 7], [6, 12.2], [6, 9.4]]
+      [6, 11.2], [6, 8.4], [6, 10.2], [6, 9.4]]
     },{
       name: "C2",
       data: [
-      [7, 12], [7, 11], [7, 13.4], [7, 12.2], [7, 11.7], [7, 16], [7, 12]]
+      [7, 12], [7, 11],[7, 12.2], [7, 11.7], [7, 12]]
+    },{
+      name: "c3",
+      data: [
+      [9, 13], [9, 12], [9, 10]]
     },{
       name: "D1",
       data: [
-      [9, 3], [9, 3.5], [9, 3], [9, 3], [9, 8], [9, 2], [9, 3]]
+      [null]]
+    },{
+      name: "D2",
+      data: [
+      [null]]
+    },{
+      name: "D3",
+      data: [
+      [null]]
+    },{
+      name: "E1",
+      data: [
+      [null]]
+    },{
+      name: "E2",
+      data: [
+      [null]]
+    },{
+      name: "E3",
+      data: [
+      [null]]
     }],
     chart: {
+    toolbar:{show:false},
     height: 350,
     type: 'scatter',
     zoom: {
       enabled: false,
       type: 'xy'
     }
-  },
+  }, 
   dataLabels: {
     enabled: false
   },
 
   legend: {
-    show: true,
+    show: false,
     labels: {
       useSeriesColors: true
   },
@@ -459,13 +484,101 @@ Apex.chart = {
 
 
 
+
+
 // chart price2
 (function () {
   var options = {
     series: [{
-      name: '투자 가치 (백만)',
+      name: '투자 가치 (만)',
+      type: 'area',
+      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
+    }, {
+      name: '',
+      type: 'line',
+      data: []
+    }],
+    chart: {
+      height: '100%',
+      type: 'line',
+      toolbar: {
+        show: false
+      }
+    },
+
+    colors: ['#008ffb'],
+    stroke: {
+      width: [0, 0]
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '60%'
+      }
+    },
+    legend: {
+      show: false
+    },
+    dataLabels: {
+      enabled: false,
+      enabledOnSeries: [1]
+    },
+    labels: ['08/2020', '09/2020', '10/2020', '11/2020', '12/2020', '01/2021', '02/2021', '03/2021'],
+    xaxis: {
+      tooltip: {
+        enabled: false
+      }
+    },
+
+    stroke: {
+      show: true,
+      curve: 'smooth',
+      colors: ['#008ffb'],
+      width: 4,
+      dashArray: 0,      
+  },
+
+
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'light',
+        type: 'vertical',
+        shadeIntensity: .5,
+        opacityFrom: 0.7,
+        opacityTo: 0.0,
+        stops: [0, 100]}
+    },
+
+    yaxis: [{
+      labels: {
+        show: true,
+      }
+
+    }, {
+      opposite: true,
+      labels: {
+        show: false
+      }
+    }]
+  };
+
+  var chart = document.querySelector('#chart-price2');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+
+
+
+
+// chart price3
+(function () {
+  var options = {
+    series: [{
+      name: '투자 가치 (만)',
       type: 'column',
-      data: [300, 300, 550, 550, 650, 650, 650, 750]
+      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
     }, {
       name: '',
       type: 'line',
@@ -513,7 +626,7 @@ Apex.chart = {
     }]
   };
 
-  var chart = document.querySelector('#chart-price2');
+  var chart = document.querySelector('#chart-price3');
   if (chart != null) {
     new ApexCharts(chart, options).render();
   }

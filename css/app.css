@@ -869,6 +869,10 @@ button {
   display: none;
 }
 
+.tabs-hide {
+  display: none;
+}
+
 .mfp-hide {
   display: none !important;
 }
@@ -3126,7 +3130,7 @@ body.dark .slider__close .icon {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -8px auto 0 -8px;
+  margin: -8px auto 0 -8px; 
 }
 
 .widgets__variants .widgets__link {

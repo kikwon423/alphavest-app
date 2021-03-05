@@ -3242,8 +3242,8 @@ body.dark .slider__close .icon {
 }
 
 .product__thumb img{
-  width: 150px;
-  border-radius: 6px;
+  width: 80px;
+  border-radius: 50px;
   margin-right: 24px;
   margin-left: -12px;
 }
@@ -5366,7 +5366,7 @@ body.dark .promotions__flex:not(.promotions__flex_head):hover {
 }
 
 .promotion__line:first-child {
-  color: #FF6628;
+
 }
 
 .promotion__line:first-child .icon {

@@ -493,7 +493,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     series: [{
       name: '투자 가치 (만)',
       type: 'area',
-      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
+      data: [3000, 3000, 5500, 5500, 6500, 6500, 7500, 7500]
     }, {
       name: '',
       type: 'line',
@@ -532,7 +532,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
 
     stroke: {
       show: true,
-      curve: 'smooth',
+      curve: 'stepline',
       colors: ['#008ffb'],
       width: 4,
       dashArray: 0,      

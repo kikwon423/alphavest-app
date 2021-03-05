@@ -375,7 +375,6 @@ Apex.chart = {
 
 
 
-
 // chart scatter plot2
 
 (function () {
@@ -396,11 +395,11 @@ Apex.chart = {
     },{
       name: "B1",
       data: [
-      [3, 5.4], [3, 7], [3, 9], [3, 6], [3, 5]]
+      [3, 5.4], [3, 7], [3, 6], [3, 5]]
     },{
       name: "B2",
       data: [
-      [4, 6], [4, 8], [4, 7.4], [4, 6.5], [4, 10]]
+      [4, 6], [4, 8], [4, 7.4], [4, 6.5]]
     },{
       name: "B3",
       data: [
@@ -416,7 +415,7 @@ Apex.chart = {
     },{
       name: "c3",
       data: [
-      [9, 13], [9, 12], [9, 10]]
+      [9, 13], [9, 12]]
     },{
       name: "D1",
       data: [
@@ -455,6 +454,8 @@ Apex.chart = {
     enabled: false
   },
 
+colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7B500",  "#FA6400"],
+
   legend: {
     show: false,
     labels: {
@@ -471,7 +472,7 @@ Apex.chart = {
   },
 
   yaxis: {
-    tickAmount: 7
+    tickAmount: 5
   }
   };
   
@@ -603,6 +604,22 @@ Apex.chart = {
     legend: {
       show: false
     },
+
+    title: {
+      text: '등급 분포',
+      align: 'center',
+      margin: 10,
+      offsetX: 0,
+      offsetY: 0,
+      floating: false,
+      style: {
+        fontSize:  '14px',
+        fontWeight:  'bold',
+        fontFamily:  'Poppins',
+        color:  '#263238'
+      },
+    },
+
     dataLabels: {
       enabled: false,
       enabledOnSeries: [1]
@@ -1048,6 +1065,73 @@ Apex.chart = {
   };
 
   var chart = document.querySelector('#chart-exhcange-deep');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+// projects chart 
+
+(function () {
+  var options = {
+    series: [0,0,4, 4, 4, 4, 5,2],
+    colors: ["#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7B500","#FA6400","#E02020"],
+    labels: ['A1 등급','A2 등급','B1 등급', 'B2 등급', 'B3 등급', 'C1 등급', 'C2 등급','C3 등급'],
+    chart: {
+      width: 250,
+      type: "donut"
+    },
+    dataLabels: {
+       enabled: false
+    },
+    plotOptions: {
+      pie: {
+        startAngle: -90,
+        endAngle: 90,
+      
+        donut: {
+          size:'85%',
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              fontSize: '20px',
+              fontFamily: 'Poppins',
+              offsetY: -12
+            },
+            value: {
+            show: true,
+            fontSize: '36px',
+            fontFamily: 'Poppins',
+            color: undefined,
+            formatter: function (val) {
+              return val
+            }
+          },
+            total: {
+            show: true,
+            label: '총 프로잭트',
+            color: 'black',
+            offsetY: '30px',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            }
+          }
+        }
+      }
+    }
+    },
+    tooltip: {
+      enabled: false,
+    },
+    legend: {
+      show: false
+    }
+  };
+
+  var chart = document.querySelector('#chart-projects');
   if (chart != null) {
     new ApexCharts(chart, options).render();
   }

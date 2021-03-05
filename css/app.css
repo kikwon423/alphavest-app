@@ -3243,8 +3243,9 @@ body.dark .slider__close .icon {
 
 .product__thumb img{
   width: 150px;
-  border-radius: 12px;
+  border-radius: 6px;
   margin-right: 24px;
+  margin-left: -12px;
 }
 
 .widgets__body {

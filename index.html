@@ -327,10 +327,10 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="widgets__sorting js-tabs" style="display: block;">
                 <div class="widgets__select mobile-show" style="margin-bottom: 24px;"><select class="select js-tabs-select">
                     <option>내 투자 펀드 (4)</option>
-                    <option>내 현재 프로젝트 (29)</option>
+                    <option>내 현재 프로젝트 (23)</option>
                     <option>네 투자 활동 (121)</option>
                   </select></div>
-                <div class="widgets__variants mobile-hide h6" style="margin-bottom: 24px;"><a class="widgets__link js-tabs-link active" href="#">내 투자 펀드 (4)</a><a class="widgets__link js-tabs-link" href="#">내 현재 프로젝트  (29)</a><a class="widgets__link js-tabs-link" href="#">네 투자 활동  (121)</a></div>
+                <div class="widgets__variants mobile-hide h6" style="margin-bottom: 24px;"><a class="widgets__link js-tabs-link active" href="#">내 투자 펀드 (4)</a><a class="widgets__link js-tabs-link" href="#">내 현재 프로젝트  (23)</a><a class="widgets__link js-tabs-link" href="#">네 투자 활동  (121)</a></div>
                 
                 <div class="widgets__container">
                   <div class="widgets__list js-tabs-item">
@@ -350,7 +350,7 @@ if (localStorage.getItem('darkMode') === "on") {
                         <div class="widgets__line">
                           <div class="widgets__price h6"><span class="details__category">자본금</span><br>₩859억</div>
                           <div class="status h6"><span class="details__category">평균 수익</span><br>8-12%</div>
-                          <div class="status h6 text-right"><span class="details__category">현재 프로젝트</span><br>6</div>
+                          <div class="status h6 text-right"><span class="details__category">현재 프로젝트</span><br>4</div>
                         </div>
                         <div class="widgets__chart">
                           <div id="spark-2"></div>
@@ -373,7 +373,7 @@ if (localStorage.getItem('darkMode') === "on") {
                         <div class="widgets__line">
                           <div class="widgets__price h6"><span class="details__category">현재 가치</span><br>₩1,875만 </div>
                           <div class="status h6"><span class="details__category">평균 수익</span><br>10-12%</div>
-                          <div class="status h6 text-right"><span class="details__category">현재 프로젝트</span><br>8</div>
+                          <div class="status h6 text-right"><span class="details__category">현재 프로젝트</span><br>6</div>
                         </div>
                         <div class="widgets__chart">
                           <div id="spark-1"></div>
@@ -419,7 +419,7 @@ if (localStorage.getItem('darkMode') === "on") {
                         <div class="widgets__line">
                           <div class="widgets__price h6"><span class="details__category">현재 가치</span><br>₩1,500만 </div>
                           <div class="status h6"><span class="details__category">평균 수익</span><br>12-18%</div>
-                          <div class="status h6 text-right"><span class="details__category">프로젝트</span><br>10</div>
+                          <div class="status h6 text-right"><span class="details__category">프로젝트</span><br>8</div>
                         </div>
                         <div class="widgets__chart">
                           <div id="spark-3"></div>
@@ -474,8 +474,12 @@ if (localStorage.getItem('darkMode') === "on") {
                           </svg><span class="btn__text">자세히 보기</span></button>
                       </div>
                     </div> 
+
+
+                   <div class="pagination" style="margin-top:36px; margin-left: 10px;"><a class="pagination__item active" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">4</a><a class="pagination__next" href="#">다음<svg class="icon icon-check">
+                  <use xlink:href="img/sprite.svg#icon-check"></use></svg></a></div>
                     
-                    <div class="widgets__btns" style="width: 100%;"><center><button class="widgets__btn btn btn_blue">프로젝트 보기</button></center></div>
+                    
 
                   </div>
 
@@ -547,19 +551,14 @@ if (localStorage.getItem('darkMode') === "on") {
 
             <div class="card">
               <div class="card__head">
-                <div class="card__title h6">My Investments</div>
+                <div class="card__title h6">내 현재 프로잭트</div>
               </div>
               <div class="card__list text-center">
-                <div class="card__currency text-center">KRW</div>
-                <div class="card__number text-center h4">75,000,000</div>
-                <div class="card__price h6 text-center color-green">+35,000,000</div>
+                <div class="card__inner" style="margin-bottom: 24px;">
+                  <center><div id="chart-projects"></div></center>
+                </div>
+                <div class="card__number text-center h6">등급 분포</div>
                 <div id="chart-scatter-projects2"></div>
-                <div class="card__inner">
-                
-  
-              </div>
-
-
               </div>
             </div>
 

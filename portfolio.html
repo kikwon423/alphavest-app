@@ -233,60 +233,75 @@ if (localStorage.getItem('darkMode') === "on") {
               <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
             </svg></button>
         </div>
+
+
+
+
+
+
+
         <div class="wallets">
           <div class="wallets__container">
-            <div class="wallets__wrapper">
-              <div class="wallets__row">
-                <div class="wallets__total">
-                  <div class="wallets__title h6">투자 성과</div>
-                  <div class="wallets__flex">
-                    <div class="wallets__number h3">₩750,000,000</div>
-                    <div class="wallets__currency">KRW</div>
+        <div class="details">
+              <div class="details__container">
+                <div class="wallets__wrapper" style="margin-bottom:0px;">
+                  <div class="balances__title h5">포트폴리오 개요</div>
+                  <div class="wallets__row">
+                    <div class="wallets__group">
+                      <div class="wallets__box">
+                        <div class="wallets__info">Equities: 45%</div>
+                        <div class="wallets__progress bg-purple" style="width: 90%;"></div>
+                      </div>
+                      <div class="wallets__box">
+                        <div class="wallets__info">Bond: 55%</div>
+                        <div class="wallets__progress bg-blue" style="width: 100%;"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="wallets__price h6 status positive color-green">₩375,000,000 (+150.00%)</div>
-                </div>
-                <div class="wallets__group">
-                  <div class="wallets__box">
-                    <div class="wallets__info">Equities: 45%</div>
-                    <div class="wallets__progress bg-purple" style="width: 45%;"></div>
-                  </div>
-                  <div class="wallets__box">
-                    <div class="wallets__info">Bond: 55%</div>
-                    <div class="wallets__progress bg-blue" style="width: 55%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="wallets__inner">
+              <div class="wallets__inner" style="margin-top: 16px;">
                 <div class="wallets__list">
                   <div class="wallets__item">
-                    <div class="wallets__icon"><img src="img/circle-purple.svg" alt=""></div>
+                    <div class="details__icon"><img src="img/market-blue.svg" alt=""></div>
                     <div class="wallets__details">
-                      <div class="wallets__info">Alpha Growth Digital-REIT</div>
-                      <div class="wallets__number h6">₩165,000,000 </div>
-                      <div class="wallets__price">55%</div>
+                      <div class="wallets__info">Digital REITs</div>
+                      <div class="wallets__number h6">4 </div>
+                      <div class="wallets__price color-gray">₩750,000,000</div>
                     </div>
                   </div>
                   <div class="wallets__item">
-                    <div class="wallets__icon"><img src="img/circle-blue.svg" alt=""></div>
+                    <div class="details__icon"><img src="img/analytics-blue.svg" alt=""></div>
                     <div class="wallets__details">
-                      <div class="wallets__info">Alpha Income Digital-REIT</div>
-                      <div class="wallets__number h6">₩135,000,000 </div>
-                      <div class="wallets__price">45%</div>
+                      <div class="wallets__info">Active Projects</div>
+                      <div class="wallets__number h6">23</div>
+                      <div class="wallets__price color-gray">Ratings: B1-C3</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="wallets__btns"><button class="wallets__btn btn btn_blue"><svg class="icon icon-deposit">
-                    <use xlink:href="img/sprite.svg#icon-deposit"></use>
-                  </svg><span class="btn__text">Deposit</span></button></div>
             </div>
+                
+            <div id="chart-scatter-projects3"></div>
+
+                
+            </div>
+          </div>
+
             <div class="balances">
-              <div class="balances__title h6">24 Projects</div>
+              <div class="notifications__sorting">
+
+                <div class="notifications__select"><select class="select">
+                    <option>등급별로 정렬</option>
+                    <option>All Notification</option>
+                  </select></div>
+                <form class="notifications__search"><input class="notifications__input" type="text" placeholder="Search"><button class="notifications__start"><svg class="icon icon-search">
+                      <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg></button></form>
+              </div>
               <div class="balances__table">
                 <div class="balances__row balances__row_head">
                   <div class="balances__cell"></div>
-                  <div class="balances__cell">ASSET</div>
-                  <div class="balances__cell">symbol</div>
+                  <div class="balances__cell">관리자 자산</div>
+                  <div class="balances__cell">자산 등급</div>
                   <div class="balances__cell">24H MARKET</div>
                   <div class="balances__cell">ON ORDERS</div>
                   <div class="balances__cell">AVAILABLE BALANCE</div>
@@ -297,10 +312,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">롯데프리미엄아울렛 이천점</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status positive">+2.05%</div>
                   </div>
@@ -322,10 +337,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/ktb.png"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">인천 국제공항</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status negative">-2.73%</div>
                   </div>
@@ -347,10 +362,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/kb.png"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">동대문 디자인 플라자</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status positive">+2.05%</div>
                   </div>
@@ -372,10 +387,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">롯데월드타워</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status negative">-2.73%</div>
                   </div>
@@ -397,10 +412,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/kb.png"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">래미안 대치팰리스</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status positive">+2.05%</div>
                   </div>
@@ -422,10 +437,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/kb.png"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">잠실 올림픽 주경기장</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status negative">-2.73%</div>
                   </div>
@@ -447,10 +462,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">롯데마트/롯데아울렛 대구 율하점</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status positive">+2.05%</div>
                   </div>
@@ -472,10 +487,10 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo-sm.svg"></div>
-                      <div class="balances__text">Bitcoin</div>
+                      <div class="balances__text">송파 헬리오시티</div>
                     </div>
                   </div>
-                  <div class="balances__cell">BTC</div>
+                  <div class="balances__cell"><img src="img/logo/b3.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
                     <div class="status negative">-2.73%</div>
                   </div>
@@ -501,21 +516,21 @@ if (localStorage.getItem('darkMode') === "on") {
                   <use xlink:href="img/sprite.svg#icon-close"></use>
                 </svg></button>
               <div class="wallets__head">
-                <div class="wallets__logo"><img src="img/logo/ethereum.png" alt=""></div>
+                <div class="wallets__logo"><img src="img/logo/kb.png" alt=""></div>
                 <div class="wallets__details">
-                  <div class="wallets__info">ETH Balance</div>
-                  <div class="wallets__company">Ethereum</div>
+                  <div class="wallets__info">동대문 디자인 플라자</div>
+                  <div class="wallets__company">KB Growth Digital REIT</div>
                 </div>
               </div>
               <div class="wallets__body">
                 <div class="wallets__line">
                   <div class="wallets__money">24.1236</div>
-                  <div class="wallets__currency">ETH</div>
+                  <div class="wallets__currency">B2</div>
                 </div>
                 <div class="wallets__code">3,700.96 USD</div>
                 <div class="wallets__parameters">
                   <div class="wallets__parameter">
-                    <div class="wallets__preview bg-purple"><img src="img/bitcoin.svg" alt=""></div>
+                    <div class="wallets__preview bg-purple"><img src="img/logo/b2.svg" alt=""></div>
                     <div class="wallets__box">
                       <div class="wallets__category">Trading account</div>
                       <div class="wallets__number h6">0.256567545 BTC</div>
@@ -533,30 +548,11 @@ if (localStorage.getItem('darkMode') === "on") {
                 </div>
                 <div class="card">
                   <div class="card__head">
-                    <div class="card__title h6">24h Markets</div>
-                    <div class="dropdown"><button class="dropdown__head"><svg class="icon icon-dots">
-                          <use xlink:href="img/sprite.svg#icon-dots"></use>
-                        </svg></button>
-                      <div class="dropdown__body"><a class="dropdown__link selected" href="#">24h Markets</a><a class="dropdown__link" href="#">16h Markets</a><a class="dropdown__link" href="#">8h Markets</a><a class="dropdown__link" href="#">4h Markets</a></div>
-                    </div>
+                    <div class="card__title h6">사진</div>
                   </div>
                   <div class="widgets">
-                    <div class="widgets__box">
-                      <div class="widgets__top">
-                        <div class="widgets__company">
-                          <div class="widgets__details">
-                            <div class="widgets__category">Ethereum</div>
-                            <div class="widgets__info">ETH</div>
-                          </div>
-                        </div>
-                        <div class="widgets__group">
-                          <div class="status positive">+2.05%</div>
-                          <div class="widgets__price">18,245.4 USD</div>
-                        </div>
-                      </div>
-                      <div class="widgets__chart">
-                        <div id="spark-1"></div>
-                      </div>
+                    <div class="widgets__box" style="padding: 24px;">
+                      <img class="promotions__preview" src="img/promotions-pic-1.jpg" style="border-radius: 12px;" alt="">
                     </div>
                   </div>
                   <div class="card__btns card__btns_mt40"><button class="card__btn btn btn_blue"><svg class="icon icon-withdraw">

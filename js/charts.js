@@ -472,11 +472,161 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   },
 
   yaxis: {
-    tickAmount: 5
+    tickAmount: 5,
+    labels:{formatter: function (val) {
+      return val + '%'
+    }
+  }
   }
   };
   
   var chart = document.querySelector('#chart-scatter-projects2');
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})();
+
+
+
+
+
+
+
+// chart scatter plot3
+
+(function () {
+  options = {
+    
+    series: [{
+      name: "A1",
+      data: [
+      [null]]
+    },{
+      name: "A2",
+      data: [
+      [null]]
+    },{
+      name: "A3",
+      data: [
+      [null]]
+    },{
+      name: "B1",
+      data: [
+      [3, 5.4], [3, 7], [3, 6], [3, 5]]
+    },{
+      name: "B2",
+      data: [
+      [4, 6], [4, 8], [4, 7.4], [4, 6.5]]
+    },{
+      name: "B3",
+      data: [
+      [5, 7], [5, 9], [5, 10], [5, 7]]
+    },{
+      name: "C1",
+      data: [
+      [6, 11.2], [6, 8.4], [6, 10.2], [6, 9.4]]
+    },{
+      name: "C2",
+      data: [
+      [7, 12], [7, 11],[7, 12.2], [7, 11.7], [7, 12]]
+    },{
+      name: "C3",
+      data: [
+        [null]]
+    },{
+      name: "D1",
+      data: [
+      [9, 13], [9, 12]]
+    },{
+      name: "D2",
+      data: [
+      [null]]
+    },{
+      name: "D3",
+      data: [
+      [null]]
+    },{
+      name: "E1",
+      data: [
+      [null]]
+    },{
+      name: "E2",
+      data: [
+      [null]]
+    },{
+      name: "E3",
+      data: [
+      [null]]
+    }],
+    chart: {
+    toolbar:{show:false},
+    height: 350,
+    type: 'scatter',
+    zoom: {
+      enabled: false,
+      type: 'xy'
+    }
+  }, 
+  dataLabels: {
+    enabled: false
+  },
+
+  title: {
+    text: '투자 자산 등급 분포',
+    align: 'left',
+    margin: 10,
+    offsetX: 25,
+    offsetY: 10,
+    floating: false,
+    style: {
+      fontSize:  '18px',
+      fontWeight:  'bold',
+      fontFamily:  'Poppins',
+      color:  '#263238'
+    },
+},
+
+colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7B500",  "#FA6400"],
+
+  legend: {
+    show: true,
+    fontSize: '18px',
+    showForZeroSeries: false,
+    labels: {
+      useSeriesColors: true
+  },
+  markers: {
+    width: 0,
+    height: 0,
+    strokeWidth: 0,
+    strokeColor: '#fff',
+    fillColors: undefined,
+    radius: 12,
+    customHTML: undefined,
+    onClick: undefined,
+    offsetX: 0,
+    offsetY: 0
+},
+  },
+
+  xaxis: {
+    tickAmount: 5,
+    tickPlacement: 'between',
+    labels: {show:false},
+    min:0,
+    max:15
+  },
+
+  yaxis: {
+    tickAmount: 5,
+    labels:{formatter: function (val) {
+      return val + '%'
+    },
+  }
+  }
+  };
+  
+  var chart = document.querySelector('#chart-scatter-projects3');
   if (chart != null) {
     new ApexCharts(chart, options).render();
   }
@@ -1074,7 +1224,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
 
 (function () {
   var options = {
-    series: [0,0,4, 4, 4, 4, 5,2],
+    series: [0,0,1305, 1204, 1454, 1254, 1631, 652],
     colors: ["#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7B500","#FA6400","#E02020"],
     labels: ['A1 등급','A2 등급','B1 등급', 'B2 등급', 'B3 등급', 'C1 등급', 'C2 등급','C3 등급'],
     chart: {
@@ -1101,11 +1251,11 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
             },
             value: {
             show: true,
-            fontSize: '36px',
+            fontSize: '30px',
             fontFamily: 'Poppins',
             color: undefined,
             formatter: function (val) {
-              return val
+              return '₩' + val + '만'
             }
           },
             total: {
@@ -1115,7 +1265,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
             offsetY: '30px',
             formatter: function (w) {
               return w.globals.seriesTotals.reduce((a, b) => {
-                return a + b
+                return '₩7500만'
               }, 0)
             }
           }
@@ -1124,10 +1274,20 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }
     },
     tooltip: {
-      enabled: false,
+      enabled: true,
+      y: {
+        formatter: function(val) {
+          return (val / 7500 *100).toFixed(2) + '%';
+        },
+        title: {
+          formatter: function (seriesName) {
+            return ''
+          }
+        }
+      }
     },
     legend: {
-      show: false
+      show: false,
     }
   };
 

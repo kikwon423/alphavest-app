@@ -3551,6 +3551,7 @@ body.dark .widgets__favorite:hover .icon {
 
 .card__category {
   font-size: 16px;
+  word-break: keep-all;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -5061,6 +5062,7 @@ body.dark .activity__parameter {
   font-size: 18px;
   line-height: 1.33333;
   font-weight: 500;
+  word-break: keep-all;
   color: #11142D;
 }
 

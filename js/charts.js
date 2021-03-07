@@ -560,7 +560,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }],
     chart: {
     toolbar:{show:false},
-    height: 350,
+    height: 250,
     type: 'scatter',
     zoom: {
       enabled: false,
@@ -610,7 +610,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   },
 
   xaxis: {
-    tickAmount: 5,
+    tickAmount: 7,
     tickPlacement: 'between',
     labels: {show:false},
     min:0,
@@ -618,7 +618,9 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   },
 
   yaxis: {
-    tickAmount: 5,
+    tickAmount: 4,
+    min:3,
+    max:15,
     labels:{formatter: function (val) {
       return val + '%'
     },

@@ -234,6 +234,12 @@ if (localStorage.getItem('darkMode') === "on") {
             </svg></button>
         </div>
 
+
+
+
+
+
+
         <div class="wallets">
           <div class="wallets__container">
             <div class="wallets__wrapper">
@@ -249,11 +255,11 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="wallets__group">
                   <div class="wallets__box">
                     <div class="wallets__info">Equities: 60%</div>
-                    <div class="wallets__progress bg-purple" style="width: 90%;"></div>
+                    <div class="wallets__progress bg-purple" style="width: 100%;"></div>
                   </div>
                   <div class="wallets__box">
                     <div class="wallets__info">Bond: 40%</div>
-                    <div class="wallets__progress bg-blue" style="width: 60%;"></div>
+                    <div class="wallets__progress bg-blue" style="width: 80%;"></div>
                   </div>
                 </div>
               </div>
@@ -281,6 +287,49 @@ if (localStorage.getItem('darkMode') === "on") {
                     <use xlink:href="img/sprite.svg#icon-deposit"></use>
                   </svg><span class="btn__text">Deposit</span></button></div>
             </div>
+        <div class="details">
+              <div class="details__container">
+                <div class="wallets__wrapper" style="margin-bottom:0px;">
+                  <div class="balances__title h5">포트폴리오 개요</div>
+                  <div class="wallets__row">
+                    <div class="wallets__group">
+                      <div class="wallets__box">
+                        <div class="wallets__info">Equities: 45%</div>
+                        <div class="wallets__progress bg-purple" style="width: 90%;"></div>
+                      </div>
+                      <div class="wallets__box">
+                        <div class="wallets__info">Bond: 55%</div>
+                        <div class="wallets__progress bg-blue" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                  </div>
+              <div class="wallets__inner" style="margin-top: 16px;">
+                <div class="wallets__list">
+                  <div class="wallets__item">
+                    <div class="details__icon"><img src="img/market-blue.svg" alt=""></div>
+                    <div class="wallets__details">
+                      <div class="wallets__info">Digital REITs</div>
+                      <div class="wallets__number h6">4 </div>
+                      <div class="wallets__price color-gray">₩750,000,000</div>
+                    </div>
+                  </div>
+                  <div class="wallets__item">
+                    <div class="details__icon"><img src="img/analytics-blue.svg" alt=""></div>
+                    <div class="wallets__details">
+                      <div class="wallets__info">Active Projects</div>
+                      <div class="wallets__number h6">23</div>
+                      <div class="wallets__price color-gray">Ratings: B1-C3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+            <div id="chart-scatter-projects3"></div>
+
+                
+            </div>
+          </div>
 
             <div class="balances">
               <div class="notifications__sorting">
@@ -297,35 +346,35 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="balances__row balances__row_head">
                   <div class="balances__cell"></div>
                   <div class="balances__cell">관리자 자산</div>
-                  <div class="balances__cell">CUSIP</div>
-                  <div class="balances__cell">Shares</div>
-                  <div class="balances__cell">Initial Value</div>
-                  <div class="balances__cell">Current Value</div>
-                  <div class="balances__cell">Profit/Loss</div>
+                  <div class="balances__cell">자산 등급</div>
+                  <div class="balances__cell">24H MARKET</div>
+                  <div class="balances__cell">ON ORDERS</div>
+                  <div class="balances__cell">AVAILABLE BALANCE</div>
+                  <div class="balances__cell">TOTAL BALANCE</div>
                 </div>
                 <div class="balances__row">
                   <div class="balances__cell"><button class="favorite"></button></div>
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
-                      <div class="balances__text">Lotte Income Digital REIT</div>
+                      <div class="balances__text">롯데프리미엄아울렛 이천점</div>
                     </div>
                   </div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
-                    <div class="balances__number">DR9809423</div>
+                    <div class="status positive">+2.05%</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">19.2</div>
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩239,266.6454898</div>
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩357,466,449,337</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">+ ₩34,046,886</div>
-                    <div class="balances__price status positive">12.64%</div>
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                 </div>
                 <div class="balances__row">
@@ -333,24 +382,24 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/ktb.png"></div>
-                      <div class="balances__text">KTB Growth Digital REIT</div>
+                      <div class="balances__text">인천 국제공항</div>
                     </div>
                   </div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
-                    <div class="balances__number">DR9809422</div>
+                    <div class="status negative">-2.73%</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">19.2</div>
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩239,266.6454898</div>
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩357,466,449,337</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">+ ₩34,046,886</div>
-                    <div class="balances__price status positive">12.64%</div>
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                 </div>
                 <div class="balances__row">
@@ -358,24 +407,124 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo/kb.png"></div>
-                      <div class="balances__text">KB Growth Digital REIT</div>
+                      <div class="balances__text">동대문 디자인 플라자</div>
                     </div>
                   </div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
-                    <div class="balances__number">DR4809425</div>
+                    <div class="status positive">+2.05%</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">19.2</div>
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩239,266.6454898</div>
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩357,466,449,337</div>
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                </div>
+                <div class="balances__row">
+                  <div class="balances__cell"><button class="favorite"></button></div>
+                  <div class="balances__cell">
+                    <div class="balances__company">
+                      <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
+                      <div class="balances__text">롯데월드타워</div>
+                    </div>
+                  </div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
+                  <div class="balances__cell">
+                    <div class="status negative">-2.73%</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">+ ₩34,046,886</div>
-                    <div class="balances__price status positive">12.64%</div>
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                </div>
+                <div class="balances__row">
+                  <div class="balances__cell"><button class="favorite"></button></div>
+                  <div class="balances__cell">
+                    <div class="balances__company">
+                      <div class="balances__logo"><img src="img/logo/kb.png"></div>
+                      <div class="balances__text">래미안 대치팰리스</div>
+                    </div>
+                  </div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
+                  <div class="balances__cell">
+                    <div class="status positive">+2.05%</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                </div>
+                <div class="balances__row">
+                  <div class="balances__cell"><button class="favorite"></button></div>
+                  <div class="balances__cell">
+                    <div class="balances__company">
+                      <div class="balances__logo"><img src="img/logo/kb.png"></div>
+                      <div class="balances__text">잠실 올림픽 주경기장</div>
+                    </div>
+                  </div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
+                  <div class="balances__cell">
+                    <div class="status negative">-2.73%</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                </div>
+                <div class="balances__row">
+                  <div class="balances__cell"><button class="favorite"></button></div>
+                  <div class="balances__cell">
+                    <div class="balances__company">
+                      <div class="balances__logo"><img src="img/logo/lotte.svg"></div>
+                      <div class="balances__text">롯데마트/롯데아울렛 대구 율하점</div>
+                    </div>
+                  </div>
+                  <div class="balances__cell"><img src="img/logo/b2.svg" alt="" style="width: 30px;"></div>
+                  <div class="balances__cell">
+                    <div class="status positive">+2.05%</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                 </div>
                 <div class="balances__row">
@@ -383,28 +532,28 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">
                     <div class="balances__company">
                       <div class="balances__logo"><img src="img/logo-sm.svg"></div>
-                      <div class="balances__text">알파배스트 Core Digital REIT</div>
+                      <div class="balances__text">송파 헬리오시티</div>
                     </div>
                   </div>
+                  <div class="balances__cell"><img src="img/logo/b3.svg" alt="" style="width: 30px;"></div>
                   <div class="balances__cell">
-                    <div class="balances__number">DR7409121</div>
+                    <div class="status negative">-2.73%</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">19.2</div>
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩239,266.6454898</div>
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                   <div class="balances__cell">
-                    <div class="balances__number">₩357,466,449,337</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">+ ₩34,046,886</div>
-                    <div class="balances__price status positive">12.64%</div>
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
                   </div>
                 </div>
-
               </div>
+              <div class="balances__btns"><button class="balances__btn btn btn_blue">Load more</button></div>
             </div>
           </div>
           <div class="wallets__sidebar">

@@ -234,31 +234,30 @@ if (localStorage.getItem('darkMode') === "on") {
             </svg></button>
         </div>
 
-
-
-
-
-
-
         <div class="wallets">
           <div class="wallets__container">
-        <div class="details">
-              <div class="details__container">
-                <div class="wallets__wrapper" style="margin-bottom:0px;">
-                  <div class="balances__title h5">포트폴리오 개요</div>
-                  <div class="wallets__row">
-                    <div class="wallets__group">
-                      <div class="wallets__box">
-                        <div class="wallets__info">Equities: 45%</div>
-                        <div class="wallets__progress bg-purple" style="width: 90%;"></div>
-                      </div>
-                      <div class="wallets__box">
-                        <div class="wallets__info">Bond: 55%</div>
-                        <div class="wallets__progress bg-blue" style="width: 100%;"></div>
-                      </div>
-                    </div>
+            <div class="wallets__wrapper">
+              <div class="wallets__row">
+                <div class="wallets__total">
+                  <div class="wallets__title h6">포트폴리오 성과</div>
+                  <div class="wallets__flex">
+                    <div class="wallets__number h3">₩750,000,000</div>
+                    <div class="wallets__currency">KRW</div>
                   </div>
-              <div class="wallets__inner" style="margin-top: 16px;">
+                  <div class="wallets__price h6 status positive color-green">₩375,000,000 (+150.00%)</div>
+                </div>
+                <div class="wallets__group">
+                  <div class="wallets__box">
+                    <div class="wallets__info">Equities: 60%</div>
+                    <div class="wallets__progress bg-purple" style="width: 90%;"></div>
+                  </div>
+                  <div class="wallets__box">
+                    <div class="wallets__info">Bond: 40%</div>
+                    <div class="wallets__progress bg-blue" style="width: 60%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallets__inner">
                 <div class="wallets__list">
                   <div class="wallets__item">
                     <div class="details__icon"><img src="img/market-blue.svg" alt=""></div>
@@ -278,20 +277,17 @@ if (localStorage.getItem('darkMode') === "on") {
                   </div>
                 </div>
               </div>
+              <div class="wallets__btns"><button class="wallets__btn btn btn_blue"><svg class="icon icon-deposit">
+                    <use xlink:href="img/sprite.svg#icon-deposit"></use>
+                  </svg><span class="btn__text">Deposit</span></button></div>
             </div>
-                
-            <div id="chart-scatter-projects3"></div>
-
-                
-            </div>
-          </div>
 
             <div class="balances">
               <div class="notifications__sorting">
 
                 <div class="notifications__select"><select class="select">
                     <option>등급별로 정렬</option>
-                    <option>All Notification</option>
+                    <option>펀드로 정렬</option>
                   </select></div>
                 <form class="notifications__search"><input class="notifications__input" type="text" placeholder="Search"><button class="notifications__start"><svg class="icon icon-search">
                       <use xlink:href="img/sprite.svg#icon-search"></use>
@@ -306,6 +302,31 @@ if (localStorage.getItem('darkMode') === "on") {
                   <div class="balances__cell">ON ORDERS</div>
                   <div class="balances__cell">AVAILABLE BALANCE</div>
                   <div class="balances__cell">TOTAL BALANCE</div>
+                </div>
+                <div class="balances__row">
+                  <div class="balances__cell"><button class="favorite"></button></div>
+                  <div class="balances__cell">
+                    <div class="balances__company">
+                      <div class="balances__logo"><img src="img/logo/kb.png"></div>
+                      <div class="balances__text">동대문 디자인 플라자</div>
+                    </div>
+                  </div>
+                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
+                  <div class="balances__cell">
+                    <div class="status positive">+2.05%</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">19,266.6454898</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">357,466,449,337</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
+                  <div class="balances__cell">
+                    <div class="balances__number">$49,046,886,271</div>
+                    <div class="balances__price">$2,134.325</div>
+                  </div>
                 </div>
                 <div class="balances__row">
                   <div class="balances__cell"><button class="favorite"></button></div>
@@ -357,31 +378,7 @@ if (localStorage.getItem('darkMode') === "on") {
                     <div class="balances__price">$2,134.325</div>
                   </div>
                 </div>
-                <div class="balances__row">
-                  <div class="balances__cell"><button class="favorite"></button></div>
-                  <div class="balances__cell">
-                    <div class="balances__company">
-                      <div class="balances__logo"><img src="img/logo/kb.png"></div>
-                      <div class="balances__text">동대문 디자인 플라자</div>
-                    </div>
-                  </div>
-                  <div class="balances__cell"><img src="img/logo/b1.svg" alt="" style="width: 30px;"></div>
-                  <div class="balances__cell">
-                    <div class="status positive">+2.05%</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">19,266.6454898</div>
-                    <div class="balances__price">$2,134.325</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">357,466,449,337</div>
-                    <div class="balances__price">$2,134.325</div>
-                  </div>
-                  <div class="balances__cell">
-                    <div class="balances__number">$49,046,886,271</div>
-                    <div class="balances__price">$2,134.325</div>
-                  </div>
-                </div>
+                
                 <div class="balances__row">
                   <div class="balances__cell"><button class="favorite"></button></div>
                   <div class="balances__cell">
@@ -525,24 +522,23 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="wallets__body">
                 <div class="wallets__line">
                   <div class="wallets__money">24.1236</div>
-                  <div class="wallets__currency">B2</div>
                 </div>
-                <div class="wallets__code">3,700.96 USD</div>
+                <div class="wallets__code">₩1,700,000 </div>
                 <div class="wallets__parameters">
                   <div class="wallets__parameter">
                     <div class="wallets__preview bg-purple"><img src="img/logo/b2.svg" alt=""></div>
                     <div class="wallets__box">
-                      <div class="wallets__category">Trading account</div>
-                      <div class="wallets__number h6">0.256567545 BTC</div>
-                      <div class="wallets__price">3,700.96 USD</div>
+                      <div class="wallets__category">가나다라 마바사</div>
+                      <div class="wallets__number h6">0.256567545</div>
+                      <div class="wallets__price">₩370,000</div>
                     </div>
                   </div>
                   <div class="wallets__parameter">
                     <div class="wallets__preview bg-blue"><img src="img/hand-coin.svg" alt=""></div>
                     <div class="wallets__box">
-                      <div class="wallets__category">Total holdings</div>
-                      <div class="wallets__number h6">0.256567545 BTC</div>
-                      <div class="wallets__price">3,700.96 USD</div>
+                      <div class="wallets__category">가나다라 마바사</div>
+                      <div class="wallets__number h6">0.256567545</div>
+                      <div class="wallets__price">₩370,000</div>
                     </div>
                   </div>
                 </div>
@@ -555,12 +551,7 @@ if (localStorage.getItem('darkMode') === "on") {
                       <img class="promotions__preview" src="img/promotions-pic-1.jpg" style="border-radius: 12px;" alt="">
                     </div>
                   </div>
-                  <div class="card__btns card__btns_mt40"><button class="card__btn btn btn_blue"><svg class="icon icon-withdraw">
-                        <use xlink:href="img/sprite.svg#icon-withdraw"></use>
-                      </svg><span class="btn__text">Withdraw</span></button><button class="card__btn btn btn_border"><svg class="icon icon-deposit">
-                        <use xlink:href="img/sprite.svg#icon-deposit"></use>
-                      </svg><span class="btn__text">Deposit</span></button></div>
-                </div>
+                  
               </div>
               <div class="operations">
                 <form class="operations__form">

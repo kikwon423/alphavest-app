@@ -648,7 +648,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
       data: [3000, 3000, 5500, 5500, 6500, 6500, 7500, 7500]
     }, {
       name: '',
-      type: 'line',
+      type: 'column',
       data: []
     }],
     chart: {
@@ -715,7 +715,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }]
   };
 
-  var chart = document.querySelector('#chart-price2');
+  var chart = document.querySelector('#chart-price4');
   if (chart != null) {
     new ApexCharts(chart, options).render();
   }
@@ -730,12 +730,12 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   var options = {
     series: [{
       name: '투자 가치 (만)',
-      type: 'column',
+      type: 'line',
       data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
     }, {
       name: '',
-      type: 'line',
-      data: []
+      type: 'column',
+      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
     }],
     chart: {
       height: '100%',
@@ -758,7 +758,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     },
 
     title: {
-      text: '등급 분포',
+      text: '',
       align: 'center',
       margin: 10,
       offsetX: 0,
@@ -795,7 +795,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }]
   };
 
-  var chart = document.querySelector('#chart-price3');
+  var chart = document.querySelector('#chart-price2');
   if (chart != null) {
     new ApexCharts(chart, options).render();
   }

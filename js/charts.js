@@ -37,7 +37,7 @@ Apex.chart = {
   };
 
   // data for the sparklines that appear below header area
-  var sparklineData = [7, 5, 4, 8, 6, 4, 3];
+  var sparklineData = [3, 5, 5, 7, 9, 9, 12];
 
   var sparkOptions1 = {
     chart: {
@@ -560,7 +560,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }],
     chart: {
     toolbar:{show:false},
-    height: 250,
+    height: 450,
     type: 'scatter',
     zoom: {
       enabled: false,
@@ -639,7 +639,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
 
 
 
-// chart price2
+// chart price4
 (function () {
   var options = {
     series: [{

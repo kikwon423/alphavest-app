@@ -30,7 +30,16 @@
     <meta property="fb:admins" content="132951670226590">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="css/app-pop.css">
+      <!-- Theme styles -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/theme.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- Comment the following line if you prefer vendors broken down -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/vendor.min.css">
+
     <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
 if (viewportmeta) {
   if (screen.width < 375) {
@@ -82,221 +91,342 @@ if (localStorage.getItem('darkMode') === "on") {
       </div>
     </div>
     <div class="popup popup_settings mfp-hide" id="popup-settings">
-      <div class="popup__title h6">Account Settings</div>
-      <div class="popup__tabs js-tabs">
-        <div class="popup__select mobile-show"><select class="select js-tabs-select">
-            <option>Profile</option>
-            <option>Referrals</option>
-            <option>Password</option>
-            <option>2FA</option>
-            <option>Sessions & Login History</option>
-          </select></div>
-        <div class="popup__nav"><a class="popup__link js-tabs-link active" href="#">Profile</a><a class="popup__link js-tabs-link" href="#">Referrals</a><a class="popup__link js-tabs-link" href="#">Password</a><a class="popup__link js-tabs-link" href="#">2FA</a><a class="popup__link js-tabs-link" href="#">Sessions & Login History</a></div>
-        <div class="popup__container">
-          <div class="popup__item js-tabs-item" style="display: block;">
-            <div class="popup__user">
-              <div class="popup__label popup__label_mb32">Your Avatar</div>
-              <div class="popup__line">
-                <div class="popup__ava"><img class="popup__pic" src="img/ava-header.png" alt=""></div>
-                <div class="popup__details">
-                  <div class="popup__btns">
-                    <div class="popup__loading"><input class="popup__file" type="file"><button class="popup__upload">Upload New</button></div><button class="popup__btn btn btn_gray">Delete Avatar</button>
-                  </div><a class="popup__default" href="#">Use default avatar</a>
-                </div>
-              </div>
-            </div>
-            <div class="popup__fieldset">
-              <div class="popup__row">
-                <div class="popup__field">
-                  <div class="popup__label">Your Full Name</div>
-                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
-                </div>
-                <div class="popup__field">
-                  <div class="popup__label">Display Name</div>
-                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
-                </div>
-              </div>
-              <div class="popup__row">
-                <div class="popup__field">
-                  <div class="popup__label">Email</div>
-                  <div class="popup__wrap"><input class="popup__input" type="email"></div>
-                </div>
-                <div class="popup__field">
-                  <div class="popup__label">Location</div>
-                  <div class="popup__wrap"><input class="popup__input" type="text"></div>
-                </div>
-              </div>
-              <div class="popup__row">
-                <div class="popup__field">
-                  <div class="popup__label">Deposit Assets</div>
-                  <div class="popup__wrap"><select class="select select_arrows select_sm">
-                      <option>Enabled</option>
-                      <option>Disabled</option>
-                    </select></div>
-                </div>
-                <div class="popup__field">
-                  <div class="popup__label">Withdraw assets</div>
-                  <div class="popup__wrap"><select class="select select_arrows select_sm">
-                      <option>Enabled $1,000,000 USD/day</option>
-                      <option>Disable $1,000,000 USD/day</option>
-                    </select></div>
-                </div>
-              </div>
-            </div>
-            <div class="popup__label">Notifications</div>
-            <div class="popup__variants"><label class="checkbox"><input class="checkbox__input" type="checkbox" checked><span class="checkbox__in"><span class="checkbox__tick"></span><span class="checkbox__text">Promotions</span></span></label><label class="checkbox"><input class="checkbox__input" type="checkbox" checked><span class="checkbox__in"><span class="checkbox__tick"></span><span class="checkbox__text">Exchange</span></span></label><label class="checkbox"><input class="checkbox__input" type="checkbox"><span class="checkbox__in"><span class="checkbox__tick"></span><span class="checkbox__text">Withdrawals</span></span></label></div><button class="popup__btn btn btn_blue" type="submit">Update Profile</button>
-          </div>
-          <div class="popup__item js-tabs-item">
-            <div class="popup__invite">
-              <div class="popup__info h6">Invite your friends to Unity Exchange and Earn 15% on Friends trading fees</div>
-              <div class="popup__label">Your Referral Link</div>
-              <div class="popup__wrap"><input class="popup__input" type="text" value="https://unityexchange.design/ref?tranmautritam"><button class="popup__copy"><svg class="icon icon-copy">
-                    <use xlink:href="img/sprite.svg#icon-copy"></use>
-                  </svg></button></div>
-            </div>
-            <div class="popup__category">Total Rewards</div>
-            <div class="popup__flex">
-              <div class="popup__money h3">128.256</div>
-              <div class="popup__currency">USTD</div>
-            </div>
-            <div class="popup__parameters">
-              <div class="popup__parameter">
-                <div class="popup__head">
-                  <div class="popup__text">Inviter Rewards</div>
-                  <div class="popup__text">0.00 USDT</div>
-                </div>
-                <div class="popup__body">You’re earning 20% of the trading fees your referrals pay.</div>
-              </div>
-              <div class="popup__parameter">
-                <div class="popup__head">
-                  <div class="popup__text">Total Invited</div>
-                  <div class="popup__text">64</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="popup__item js-tabs-item">
-            <form class="popup__form">
-              <div class="popup__title h6">Change Password</div>
-              <div class="popup__field field js-field">
-                <div class="field__label">current Password</div>
-                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
-              </div>
-              <div class="popup__field field js-field">
-                <div class="field__label">new Password</div>
-                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
-              </div>
-              <div class="popup__field field js-field">
-                <div class="field__label">Confirm new Password</div>
-                <div class="field__wrap"><input class="field__input js-field-input" type="password"></div>
-              </div><button class="popup__btn btn btn_blue btn_wide">Change Password</button>
-            </form>
-          </div>
-          <div class="popup__item js-tabs-item">
-            <div class="popup__box">
-              <div class="popup__title h6">Scan Code</div>
-              <div class="popup__scan">
-                <div class="popup__preview"><img src="img/qr-code.png" alt=""></div>
-                <div class="popup__details">
-                  <div class="popup__text">If you want to turn on 2FA, use <a href="#">Google Authenticator app</a> to scan code, then enter six-digit code provided by the app to the form below.</div><button class="popup__btn btn btn_blue">Download 2FA App</button>
-                </div>
-              </div>
-            </div>
-            <div class="popup__box">
-              <div class="popup__title h6">Enter six-digit code</div>
-              <div class="popup__numbers">
-                <div class="popup__number success"><input type="tel" value="5"></div>
-                <div class="popup__number success"><input type="tel" value="6"></div>
-                <div class="popup__number success"><input type="tel" value="7"></div>
-                <div class="popup__number success"><input type="tel" value="9"></div>
-                <div class="popup__number"><input type="tel"></div>
-                <div class="popup__number"><input type="tel"></div>
-              </div>
-            </div>
-          </div>
-          <div class="popup__item js-tabs-item">
-            <div class="popup__box">
-              <div class="popup__title h6">Active Sessions</div>
-              <table class="popup__table">
-                <tr>
-                  <th>DATE/TIME</th>
-                  <th>DEVICE</th>
-                  <th>LOCATION</th>
-                  <th>IP ADDRESS</th>
-                  <th> </th>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iMac Pro</td>
-                  <td><span class="popup__flag">🇺🇸</span> USA </td>
-                  <td>123.45.678.987</td>
-                  <td><button class="popup__close"><svg class="icon icon-close">
-                        <use xlink:href="img/sprite.svg#icon-close"></use>
-                      </svg></button></td>
-                </tr>
-              </table>
-            </div>
-            <div class="popup__box">
-              <div class="popup__title h6">Login History</div>
-              <table class="popup__table">
-                <tr>
-                  <th>DATE/TIME</th>
-                  <th>DEVICE</th>
-                  <th>LOCATION</th>
-                  <th>IP ADDRESS</th>
-                  <th>2FA</th>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iMac Pro</td>
-                  <td><span class="popup__flag">🇻🇳</span> VN</td>
-                  <td>123.45.678.987</td>
-                  <td><svg class="icon icon-check">
-                      <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg></td>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iPhone X</td>
-                  <td><span class="popup__flag">🇺🇸</span> USA </td>
-                  <td>123.45.678.987</td>
-                  <td><svg class="icon icon-check">
-                      <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg></td>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iMac Pro</td>
-                  <td><span class="popup__flag">🇻🇳</span> VN</td>
-                  <td>123.45.678.987</td>
-                  <td><svg class="icon icon-check">
-                      <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg></td>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iMac Pro</td>
-                  <td><span class="popup__flag">🇺🇸</span> USA </td>
-                  <td>123.45.678.987</td>
-                  <td><svg class="icon icon-check">
-                      <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg></td>
-                </tr>
-                <tr>
-                  <td>2020-12-02 07:50:18</td>
-                  <td>iMac Pro</td>
-                  <td><span class="popup__flag">🇺🇸</span> USA </td>
-                  <td>123.45.678.987</td>
-                  <td><svg class="icon icon-check">
-                      <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg></td>
-                </tr>
-              </table>
+      <div class="popup__title h6"><img class="sidebar__pic sidebar__pic_light" src="img/logo.svg" alt="" /></div>
+      <div class="popup__tabs js-tabs" >
+      <div class="popup__select mobile-show" style="display:none;">
+        <select class="select js-tabs-select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select>
+      </div>
+      <div class="popup__nav" style="display:none;">
+        <a class="popup__link js-tabs-link active" href="#">1</a>
+        <a class="popup__link js-tabs-link" href="#">2</a>
+        <a class="popup__link js-tabs-link" href="#">3</a>
+        <a class="popup__link js-tabs-link" href="#">4</a>
+        <a class="popup__link js-tabs-link" href="#">5</a>
+        <a class="popup__link js-tabs-link" href="#">6</a>
+        <a class="popup__link js-tabs-link" href="#">7</a>
+      </div>
+
+      <div class="popup__container">
+        <div class="popup__item js-tabs-item" style="display: block;">
+          
+          <div class="login__form" style="min-height: 300px;">
+            <div class="h1 promotions__title text-center" style="margin-bottom: 20px; word-break: keep-all;">쉽게 시작할수있읍니다!</div>
+            <div class="h6 text-center" style="margin-bottom: 50px; line-height: 26px; word-break: keep-all;">자신에 대해 조금 더 알려 주시면 귀하의 목표에 가장 적합한 투자&nbsp;계획을 추천 해 드리겠습니다.</div>
+            <div class="">
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="js-tabs-link" href="#"><button class=" btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >설문 시작</button></a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
             </div>
           </div>
         </div>
+
+        <div class="popup__item js-tabs-item">
+          <div class="login__form" style="min-height: 250px; display: block;" >
+            <div class="popup__category text-purple">현재 나이</div>
+            <div class="popup__flex">
+              <div class="popup__money h3">당신의 나이는 무엇입니까?</div>
+            </div>
+            <div class="popup__parameters">
+              <form class="popup__form">
+                <div class="popup__field field js-field">
+                  <div class="field__label">나이 입력</div>
+                  <div class="field__wrap"><input class="field__input js-field-input" type="age"></div>
+                </div>
+              </form>
+              <div class="">
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="popup__item js-tabs-item">
+          <div class="login__form" style="min-height: 300px; display: block;" >
+            <div class="popup__category text-purple">투자 경험</div>
+            <div class="popup__flex">
+              <div class="popup__money h3">당신의 투자 경험 수준은 어떻습니까?</div>
+            </div>
+            <div class="popup__parameters">
+
+              <div class="popup__variants">
+                <form>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    초심자: 나는 투자가 처음이다.</label><br>
+                    <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                      초보자: 투자 계좌가 있지만 실제 투자를 선택하는 데 참여가 매우 제한적이다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    중급: 나는 주식 시장에 투자한 경험이 있고 부동산 투자에도 경험이 있다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    실력자: 주식 시장에 투자한 경험이 있고 부동산 투자에도 경험이 있다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    프로: 개인 부동산에 투자 한 경험이 있거나 자신의 투자 자산을 소유 한 적이 있다.</label><br>
+                </form>
+              </div>
+
+              <div class="">
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+                <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+              </div>
+            </div> 
+          </div>
+        </div>
+
+        <div class="popup__item js-tabs-item">
+          <div class="login__form" style="min-height: 300px; display: block;" >
+            <div class="popup__category text-purple">투자 조언</div>
+            <div class="popup__flex">
+              <div class="popup__money h3">투자 조언은 어디서 구합니까?</div>
+              
+            </div>
+            <div class="popup__parameters">
+
+            <div class="popup__variants">
+              <form>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  투자 고문: 내 포트폴리오를 관리하는 재정 고문이 있습니다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    독학: 나는 책과 기사를 읽고 내 분석에 대한 투자를 선택합니다.</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  친구와 가족: 나는 내가 신뢰하는 조언과 가족에 의존한다.</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  실력자: 주식 시장에 투자한 경험이 있고 부동산 투자에도 경험이 있다.</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  없음: 나는 조언을 구하지 않는다</label><br>
+              </form>
+            </div>
+
+            <div class="">
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+            </div>
+          </div> 
+        </div>
       </div>
-    </div><!-- scripts-->
+        <div class="popup__item js-tabs-item">
+          <div class="login__form" style="min-height: 300px; display: block;" >
+            <div class="popup__category text-purple">자극</div>
+            <div class="popup__flex">
+              <div class="popup__money h3">알파배스트와 함께 투자하는 데 관심이있는 이유는 무엇입니까?</div>
+              
+            </div>
+            <div class="popup__parameters">
+
+            <div class="popup__variants">
+              <form>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  다각화: 주식 시장 밖에서 다각화를 찾고 있다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    단순함: 부동산 투자가 현명하다고 들었고 알파배스트는 그것을 할 수있는 쉬운 방법 인 것 같다.</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  안정함: 위험을 줄이고 포트폴리오 안정성을 개선하고자한다.</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  소득: 일관된 현금 흐름을 생성하고 싶다.</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    수익: 더 높은 장기 수익을 얻고 싶다.</label><br>
+                    <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                      테크나로지: 알파배스트 테크 기술과 직접 소유 모델의 아이디어가 마음에 든다</label><br>
+              </form>
+            </div>
+
+            <div class="">
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+            </div>
+          </div> 
+        </div>
+      </div>
+
+        <div class="popup__item js-tabs-item">
+          <div class="login__form" style="min-height: 300px; display: block;" >
+            <div class="popup__category text-purple">투자 기간</div>
+            <div class="popup__flex">
+              <div class="popup__money h3">투자를 얼마나 오래 유지할 계획입니까?</div>
+              
+            </div>
+            <div class="popup__parameters">
+
+            <div class="popup__variants">
+              <form>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  3 년 미만</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    3-5 년</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  6-10 년</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  10 년 이상</label><br>
+                  
+              </form>
+            </div>
+
+            <div class="">
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="popup__item js-tabs-item">
+        <div class="login__form" style="min-height: 300px; display: block;" >
+          <div class="popup__category text-purple">투자 계획</div>
+          <div class="popup__flex">
+            <div class="popup__money h3">모든 투자에 대해 연간 얼마나 투자하기를 원하십니까?</div>
+            
+          </div>
+          <div class="popup__parameters">
+
+            <div class="popup__variants">
+              <form>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  500 만원 미만</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    500-1000 만원</label><br>
+                <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                  1100-3000 만원</label><br>
+                  <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                    3100-5000 만원</label><br>
+                    <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                      5100만원 - 1억원</label><br>
+                      <label for="age1" style="display: flex;"><input style="appearance:auto; margin-right:12px; width: 24px; height: 18px;" type="radio" id="age1" name="age" value="30">
+                        1억원 이상</label><br>
+                  
+              </form>
+            </div>
+
+            <div class="">
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="popup__link js-tabs-link" style="display:none" href="#">next </a>
+              <a class="js-tabs-link" href="#"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계속 하기</button></a>
+
+            </div>
+          </div>
+        </div> 
+      </div>
+
+
+
+      <div class="popup__item js-tabs-item">
+        <div class="popup__category text-purple">설문 결과</div>
+        <div class="popup__money h4" style="margin-bottom: 12px;">답변에 따라 제안 된 계정 수준 및 투자 계획 입니다</div>
+            
+        <div class="popup__invite">
+
+       
+            <div class="popup__category text-white">추천 프랜</div>
+            <div class="popup__head">
+              <div class="popup__text h3">스탠다드</div>
+              <div class="popup__text h3">100만원+</div>
+            </div>
+          
+
+              <div class="popup__variants">
+                
+
+
+                <div class="popup__category h4">균형 집중 투자 전략</div>
+                  <div class="popup__body text-white">성장과 소득 투자의 조합으로 자신있게 부를 쌓는 전략. 알파 배스트는 국내 최고 관리자 및 프로젝트에서 제공하는 우수한 품질의 제품을 제공합니다.</div>
+              </div>
+
+
+        <div class="popup__parameters">
+          <div class="popup__category">전략적 할당</div>
+
+          <div class="popup__parameter">
+            <div class="popup__head" style="margin-bottom: 10px;">
+              <div class="popup__text">KB Income Digital REIT</div>
+              <div class="popup__text">25%</div>
+            </div>
+            <div class="popup__head" style="margin-bottom: 10px;">
+              <div class="popup__text">KTB Growth Digital REIT</div>
+              <div class="popup__text">25%</div>
+            </div>
+            <div class="popup__head" style="margin-bottom: 10px;">
+              <div class="popup__text">Lotte Retail Income Digital REIT</div>
+              <div class="popup__text">25%</div>
+            </div>
+            <div class="popup__head">
+              <div class="popup__text">Alphavest Core Grwoth Digital REIT</div>
+              <div class="popup__text">25%</div>
+            </div>
+          </div>
+          <div class="popup__parameter">
+            <div class="popup__head">
+              <div class="popup__text">평균 초기 투자</div>
+              <div class="popup__text">150만원</div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="login__form">
+            <div class="popup__money h4 text-center" style="margin-bottom: 16px;">알파베스트를 사용할 준비가 되셨나요?</div>
+            <a href="../alphavest-app/sign-up.html"><button class="btn-purple btn-lg text-uppercase-bold-sm shadow-sm btn_wide" style="font-size: 22px; font-weight: bold;" >계정 설정 계속 하기</button></a>
+        </div> 
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- scripts-->
+
+
+  <!-- scripts-->
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/svg4everybody.min.js"></script>
     <script src="js/lib/owl.carousel.min.js"></script>
@@ -304,6 +434,6 @@ if (localStorage.getItem('darkMode') === "on") {
     <script src="js/lib/apexcharts.min.js"></script>
     <script src="js/lib/jquery.magnific-popup.min.js"></script>
     <script src="js/charts.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app-pop.js"></script>
   </body>
 </html>

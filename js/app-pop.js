@@ -181,7 +181,12 @@ $('.activity__close').on('click', function () {
 		type: 'inline',
 		mainClass: 'mfp-fade'
 	});
+
+	$('#close').click(function(){
+        $('.mfp-close').trigger('click');
+      });
 })();
+
 
 // tabs
 (function () {

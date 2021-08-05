@@ -644,7 +644,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   var options = {
     series: [{
       name: '투자 가치 (만)',
-      type: 'column',
+      type: 'area',
       data: [3000, 3000, 5500, 5500, 6500, 6500, 7500, 7500]
     }, {
       name: '',
@@ -679,12 +679,15 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     xaxis: {
       tooltip: {
         enabled: false
+      },
+      labels:{
+        show:false
       }
     },
 
     stroke: {
       show: true,
-      curve: 'stepline',
+      curve: 'smooth',
       colors: ['#008ffb'],
       width: 4,
       dashArray: 0,      
@@ -704,8 +707,9 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
 
     yaxis: [{
       labels: {
-        show: true,
+        show: false,
       }
+      
 
     }, {
       opposite: true,
@@ -725,7 +729,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
 
 
 
-// chart price3
+// chart price2
 (function () {
   var options = {
     series: [{
@@ -735,14 +739,17 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     }, {
       name: '',
       type: 'column',
-      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
+      data: [3000, 3000, 3500, 3500, 3500, 4500, 4500, 5000]
     }],
     chart: {
-      height: '100%',
+      height: '100px',
       type: 'line',
       toolbar: {
         show: false
       }
+    },
+    grid:{
+      show: false
     },
     colors: [green, blue],
     stroke: {
@@ -750,7 +757,7 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     },
     plotOptions: {
       bar: {
-        columnWidth: '60%'
+        columnWidth: '20%'
       }
     },
     legend: {
@@ -785,6 +792,12 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
     yaxis: [{
       labels: {
         show: false
+      },
+      axisBorder:{
+        show: false
+      },
+      axisTicks:{
+        show: false
       }
 
     }, {
@@ -801,6 +814,98 @@ colors: ["#E02020","#6236FF", "#0091FF", "#32C5FF", "#44D7B6",  "#6DD400",  "#F7
   }
 })();
 
+
+// chart price 3
+
+(function () {
+  var options = {
+    chart: {
+            height: '100%',
+      type: 'line',
+      toolbar: {
+        show: false
+      }
+    },
+    colors: ['#6C5DD3', '#008ffb'],
+    stroke: {
+      width: [0, 4],
+      curve: 'smooth',
+      color: '#008ffb'
+    },
+
+    
+    
+    plotOptions: {
+      bar: {
+        columnWidth: '20%',
+      }
+    },
+    series: [{
+      name: '배당금',
+      type: 'column',
+      data: [150, 150, 200, 200, 250, 250, 300, 350]
+    }, {
+      name: '가치 평가',
+      type: 'area',
+      data: [3000, 3000, 5500, 5500, 6500, 6500, 6500, 7500]
+    }],
+    fill: {
+      opacity: [1,0.15],
+    },
+    labels: ['08/2020', '09/2020', '10/2020', '11/2020', '12/2020', '01/2021', '02/2021', '03/2021'],
+    markers: {
+      size: 0
+    },
+    xaxis: {
+    },
+    yaxis: {
+      tickAmount: 4,
+
+      title: {
+        show:false
+      },
+      labels: {
+        show: false
+      },
+      axisBorder:{
+        show: false
+      },
+      axisTicks:{
+        show: false
+      },
+      
+        opposite: true,
+        labels: {
+          show: false
+        },
+      min: 0
+    },
+    legend: {
+      show: false
+    },
+    tooltip: {
+      shared: true,
+      intersect: false,
+      y: {
+        formatter: function (y) {
+          if(typeof y !== "undefined") {
+            return  y.toFixed(0) + " 만원";
+          }
+          return y;
+          
+        }
+      }
+    }
+
+  }
+
+  var chart = new ApexCharts(
+    document.querySelector("#chart-price3"),
+    options
+  );
+
+  chart.render();
+})();
 
 
 // chart price

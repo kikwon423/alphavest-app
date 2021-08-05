@@ -7380,6 +7380,11 @@ body.dark .prices__row:not(.prices__row_head):hover {
   margin: -32px -32px 24px -24px;
 }
 
+.details__chart2 {
+  height: 100px;
+  margin: -32px -32px 24px -24px;
+}
+
 .details__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7532,6 +7537,7 @@ body.dark .details__chart .apexcharts-xaxis line,
 body.dark .details__chart .apexcharts-grid line {
   stroke: rgba(228, 228, 228, 0.1);
 }
+
 
 body.dark .details__body {
   background: #191B20;
@@ -10727,6 +10733,11 @@ body.dark .actions .select.open {
   .details__chart {
     margin: -32px -44px 5px -28px;
   }
+
+  .details__chart2 {
+    margin: -52px -44px 25px -28px;
+  }
+
   .details__chart .apexcharts-text {
     font-size: 10px;
   }
